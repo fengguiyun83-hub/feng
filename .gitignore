@@ -1,0 +1,50 @@
+# Maven / Java build outputs
+target/
+*.class
+*.jar
+*.war
+*.ear
+
+# Maven local metadata
+.mvn/timing.properties
+.m2/
+dependency-reduced-pom.xml
+
+# IDE and editor settings
+.idea/
+*.iml
+.vscode/*
+!.vscode/settings.json
+.project
+.classpath
+.settings/
+
+# Logs and runtime files
+*.log
+logs/
+*.pid
+*.hprof
+hs_err_pid*
+replay_pid*
+
+# OS generated files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Environment and local override files
+.env
+.env.*
+!.env.example
+application-local.yml
+application-local.yaml
+application-*.local.yml
+application-*.local.yaml
+docker-compose.override.yml
+
+# Temporary files
+*.tmp
+*.temp
+*.swp
+*.swo
+~$*
