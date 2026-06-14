@@ -1,0 +1,20 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/robot_management
+    username: robot
+    password: robot
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    open-in-view: false
+  flyway:
+    enabled: true
+
+robot:
+  telemetry:
+    required-source: ros2-gazebo
+  redis:
+    host: localhost
+    port: 6379
+    alert-stream: robot:alerts
+    state-stream: robot:states

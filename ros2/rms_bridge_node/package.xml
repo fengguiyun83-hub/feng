@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>rms_bridge_node</name>
+  <version>0.1.0</version>
+  <description>ROS 2 to Kafka telemetry bridge for Robot Management System.</description>
+  <maintainer email="robot@example.com">Robot RMS</maintainer>
+  <license>MIT</license>
+
+  <depend>rclpy</depend>
+  <depend>nav_msgs</depend>
+
+  <exec_depend>python3-kafka</exec_depend>
+
+  <export>
+    <build_type>ament_python</build_type>
+  </export>
+</package>

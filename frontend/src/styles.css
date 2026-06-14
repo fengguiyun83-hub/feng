@@ -1,0 +1,278 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background: #f4f7fb;
+}
+
+.app-shell {
+  min-height: 100vh;
+  background: #f4f7fb;
+}
+
+.app-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 72px;
+  padding: 0 28px;
+  background: #ffffff;
+  border-bottom: 1px solid #dce4ee;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.brand h4 {
+  margin: 0;
+  line-height: 1.2;
+}
+
+.brand .ant-typography-secondary {
+  font-size: 13px;
+}
+
+.brand-mark {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  color: #ffffff;
+  background: #177ddc;
+  border-radius: 8px;
+}
+
+.app-content {
+  width: min(1440px, 100%);
+  margin: 0 auto;
+  padding: 20px 28px 32px;
+}
+
+.top-alert {
+  margin-bottom: 16px;
+}
+
+.table-toolbar {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 12px;
+}
+
+.tab-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.metric,
+.panel {
+  background: #ffffff;
+  border: 1px solid #dce4ee;
+  border-radius: 8px;
+}
+
+.metric {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  min-height: 112px;
+  padding: 18px;
+}
+
+.metric-icon {
+  display: grid;
+  flex: 0 0 auto;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  color: #177ddc;
+  background: #eaf4ff;
+  border-radius: 8px;
+}
+
+.chart-panel {
+  grid-column: span 3;
+  min-height: 360px;
+  padding: 18px;
+}
+
+.alert-panel {
+  grid-column: span 1;
+  min-height: 360px;
+  padding: 18px;
+}
+
+.section-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 14px;
+  color: #1f2a37;
+  font-weight: 600;
+}
+
+.chart {
+  width: 100%;
+  height: 290px;
+}
+
+.alert-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.alert-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  min-height: 44px;
+  padding: 8px 0;
+  border-bottom: 1px solid #eef2f6;
+}
+
+.alert-row:last-child {
+  border-bottom: 0;
+}
+
+.alert-row > div {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.drawer-content {
+  width: 100%;
+}
+
+.detail-chart {
+  width: 100%;
+  height: 220px;
+}
+
+.panel {
+  padding: 16px;
+}
+
+.panel-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.search-input {
+  max-width: 320px;
+}
+
+.system-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.twin-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(420px, 0.9fr);
+  gap: 16px;
+}
+
+.twin-map-panel,
+.twin-table-panel {
+  min-height: 520px;
+}
+
+.twin-chart {
+  width: 100%;
+  height: 440px;
+}
+
+.robot-cell {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.system-item {
+  min-height: 132px;
+  padding: 16px;
+  background: #f8fafc;
+  border: 1px solid #e3eaf2;
+  border-radius: 8px;
+}
+
+.clickable-row {
+  cursor: pointer;
+}
+
+.clickable-row:hover td {
+  background: #f0f7ff !important;
+}
+
+@media (max-width: 1080px) {
+  .dashboard-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .chart-panel,
+  .alert-panel {
+    grid-column: span 2;
+  }
+
+  .system-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .twin-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 720px) {
+  .app-header {
+    height: auto;
+    min-height: 72px;
+    padding: 12px 16px;
+  }
+
+  .app-content {
+    padding: 14px;
+  }
+
+  .dashboard-grid,
+  .system-grid,
+  .twin-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .chart-panel,
+  .alert-panel {
+    grid-column: span 1;
+  }
+
+  .panel-toolbar {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .search-input {
+    max-width: none;
+  }
+}
